@@ -19,4 +19,7 @@ To describe kafka topics
 
  .\bin\windows\kafka-topics.bat --bootstrap-server localhost:9092 --describe
 
+To describe particular topic
+
+.\bin\windows\kafka-topics.bat --bootstrap-server localhost:9092 --describe --topic topic_name
 
