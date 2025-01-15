@@ -1,0 +1,22 @@
+Kafka-server-start using kraft
+
+
+1. generate random uuid for cluster :- .\bin\windows\kafka-storage.bat random-uuid
+
+2.  .\bin\windows\kafka-storage.bat format -t S6sYpWmTRpCgJaXidUyTmA -c config/kraft/server.properties
+
+Start kafka-server
+
+.\bin\windows\kafka-server-start.bat .\config\kraft\server.properties
+
+
+
+Creating topics in kafka
+
+.\kafka-topics.bat --create --topic topic2  --partitions 3 --replication-factor 1 --bootstrap-server localhost:9092
+
+To describe kafka topics
+
+ .\bin\windows\kafka-topics.bat --bootstrap-server localhost:9092 --describe
+
+
